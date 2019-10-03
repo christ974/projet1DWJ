@@ -1,0 +1,533 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto-regular-webfont.woff2') format('woff2'), url('font/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url('fonts/roboto-light-webfont.woff2') format('woff2'), url('font/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotobold';
+    src: url('fonts/roboto-bold-webfont.woff2') format('woff2'), url('font/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*utilisation du convertisseur Fontsquirrel pour .woff reconnu par ts les navs*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: robotoregular,sans-serif;
+    word-wrap: break-word;/*détermine le renvoi à la ligne (césure)*/
+    }
+
+/***********Menu*******************/
+
+header{
+    width: 100%;
+    height: 7%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 10;
+    }
+.logo{
+    display: inline-block;
+    width: 20vw;
+    padding-left: 5vw;
+    position: relative;/*bouge relativement par rapport à sa position initiale*/
+}
+#clique{
+    width: 18vw;
+    height: 7vh;
+    position: absolute;/*position relative par rapport à son parent*/
+}
+.nav{
+    display: inline;
+    width: 80vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+.nav001{
+    list-style-type: none;/*pas déco pr ls élts de la liste*/
+    word-spacing: 2vw;/*espaces entre mots*/
+
+}
+.nav01{
+    display: inline-block;
+    text-align: center;
+    line-height: 2vh;/*écartement entre 2 lignes*/
+}
+.nav1{
+    color: dimgrey;
+    text-decoration: none;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.nav1:hover{
+    border-top: 3px solid #5cadd3;
+}
+
+.accueil{
+    width: 100%;
+    height: 30vh;
+}
+
+/***********Carrousel************/
+
+.image_slider{
+    padding-top: 6%;
+    padding-right: 0;
+    padding-left: 0;
+    display: flex;
+}
+.fille{
+    width: 100%;
+    position: relative;/*bouge relativement à sa position initiale*/
+    z-index: 2;
+}
+#fillette{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1
+}
+.text_intro{
+    width: 50vw;
+    height: 38vh;
+    margin-top: 16vh;
+    position: absolute;
+    z-index: 3;
+}
+.titre{
+    width: auto;
+    padding-left: 10vw;
+    font-family: robotobold,sans-serif;
+    font-size: 2.5vw;
+    line-height: 6vh;
+    color: #ffffff;
+    text-align: left;
+}
+#blue{ 
+    display: inline-block;
+    color:#5cadd3; 
+}
+#text_titre{
+    padding-left: 10vw;
+    line-height: 4vh;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+}
+.bout_intro{/*définition bouton*/
+   width: 8vw;
+    height:5vh;
+    padding-top: 38vh;
+    padding-left: 10vw;
+    position: absolute;
+    z-index: 4;
+}
+.clic{
+    width: 8vw;
+    height: 5vh;
+    position: absolute;
+}
+.plus{/*caractéristiques*/
+    background-color: #5cadd3;
+    border-radius: 4px;
+    font-family: robotobold, sans-serif;
+    width: 9vw;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.5%;
+}
+div.image_slider+div.fille+div.text_intro+div.titre+#blue+#text_titre+div.bout_intro+.clic+.plus{
+    display: block;/*choix de faire un seul bloc avec ts ls élts*/
+}
+
+/***********Services*******************/
+.partie_2{
+    padding-top: 4%;
+    padding-bottom: 5%;  
+}
+#service01 {
+    text-align: center;
+    font-family: robotobold, sans-serif;
+}
+#service02 {
+    font-family: robotolight, sans-serif;
+    color: gray;
+    text-align: center;
+}
+div.bloc_services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: row nowrap;
+    align-items: stretch;
+}
+
+div.ordi {
+    width: auto;
+    padding-top: 4vh;
+    display: inline-block;
+    text-align: center;
+    flex-grow: 1; /*facteur grossissementd'1 élt flexible*/
+    
+}
+div.icone{
+    width: auto;
+    padding-top: 1vh;
+    display: inline-block;
+    flex-shrink: 1;/*facteur rétrécissement d'1 élt flexible*/
+}
+
+div.text_partie2 {
+    width:  auto;
+    max-width: 50vw;
+    display: inline-block;
+    flex-grow: 1; /*facteur grossissementd'1 élt flexible*/
+    padding-right: 2vw;
+}
+
+.titre_service {
+    font-weight: bold;
+    text-align: left;
+}
+p.text_partie2 {
+    font-family: robotolight, sans-serif;
+    color: gray;
+    text-align: justify;
+}
+
+/***********Projets*******************/
+
+.partie_3 {
+    background-color: #f6f6f6;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    width: 100%;
+    height: 52%;
+}
+#projet01{
+    font-family: robotobold, sans-serif;
+    text-align: center;
+}
+#projet02{
+    text-align: center;
+}
+#projet03{
+    text-align: center;
+}
+/*********boutons******/
+
+.test:hover:after{
+  display:block;
+}
+.test:after {/*après passage de l'hover: modifs apportées*/
+	top: 20vh;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;/*cet élt ne peut pas recevoir d'autre event que le 1er défini (hover)*/
+	border-color: rgba(92, 173, 211, 0);
+	border-top-color: #5cadd3;
+	border-width: 1vw;
+	margin-left: -1vw;
+    display:none;
+}
+#bouton-galerie{/*bloc boutons*/
+	margin-top: 6vh;
+}
+#bouton-galerie .bouton_gal{ /*bloc boutons + chaque bouton*/
+	margin: 0;
+	padding:0;
+	list-style-type: none;
+	width: 32vw;
+	height: 6vh;
+	background-color: #e5e5e5;
+	border-radius: 3px;
+	margin: 0 auto;
+    font-size: 1.3vw;
+}
+#bouton-galerie li{
+	float: left;
+	width: 8vw;
+	height: 10vh;
+	text-align: center;
+	line-height: 6vh;
+	position: relative;
+}
+#bouton-galerie li a{
+	display: block;
+	text-decoration: none;
+	color: #64686d;
+}
+#bouton-galerie  li :hover{/*sur Creative/corporate/portfolio*/
+	background-color: #5cadd3;
+	border-bottom: 3px solid #468cad;
+    border-radius: 2px;
+	color: white;
+}
+
+li:nth-child(5) :hover{
+	border-radius: 0 4px 4px 0;
+	/*Permet de mettre un bord arrondi au bouton*/
+}
+.active a { /*le 1er bouton reste dans la position hover*/
+	background-color: #5cadd3;
+	border-bottom: 3px solid #468cad;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	color: white;
+}
+.fleche_galerie {	
+    position: absolute;
+	border-left: 1vw solid transparent;
+	border-right: 1vw solid transparent;
+	border-top: 1vw solid;
+    margin-left:3vw;
+    color:#5cadd3;
+}
+
+/****mosaique*****/
+
+.mosaique{/*mise en forme*/
+    padding-top: 2vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 4vh;
+    width: 100%;
+}
+ 
+.portfolio_1 img{/*caractéristiques de chaque img*/
+    width: 100%;
+    display: inline-block;
+}
+.portfolio_1{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: auto;
+    width: 22vw;
+    margin: 1vw;
+
+    }
+.enfant2{ /*mise en forme des hover*/
+    position: absolute;
+    background: rgba(169, 169, 169, 0.36);
+    width: 100%;
+    height:auto;
+    opacity: 0;
+    bottom: -0.2vw;
+    transition: all 0.1s;
+    }
+.accroche{
+    font-weight: bold;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+    padding-left: 2vw;
+}
+#accroche2{
+    padding-left: 2vw;
+    text-shadow: 2px 2px 4px gray;
+    display: inline-block;
+    color: white;
+}
+#oeil{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: -6vh;
+    left: 13vw;
+    
+   
+    }
+.portfolio_1:hover .enfant2{ /*hover de chque img+text+oeil*/
+        opacity: 1;
+        bottom: 0;
+    }
+
+/***********Contact*******************/
+
+#contact{
+    position: relative;
+}
+.google_maps{/*url récupérée après recherche google, après un "intégrer la carte" de l'adresse recherchée  - choix d'intégration par l'iframe plus simple que via des apis google*/
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    opacity: 0.6;
+}
+.partie_4 {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 5;
+    margin: 0;
+    padding: 0;   
+}
+div.infos {
+    width: 35vw;
+    background-color:#e7f1fc;
+    opacity: 0.8;
+    border-radius: 4px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 8%;
+   padding : 2%;
+    text-align: left;
+    position: relative;
+    z-index: 8;
+}
+#rue{
+    text-align: left;
+}
+input {
+    width: 94%;
+    border-radius: 2px;
+}
+textarea {
+    font-family: robotoregular, sans-serif;
+    font-size: 0.94vw;
+    border-radius: 2px;
+    width: 94%;
+    height: 25vh;
+}
+#bouton_envoi {
+    width: 10vw;
+    height: 4vh;
+    background-color: #5caed4;
+    color: white;
+    border-radius: 6px;
+    
+}
+
+/***********Footer*******************/
+
+footer{
+    text-align: center;
+    color: darkgray;
+}
+
+/***********Responsive design*******************/
+
+
+/*---inférieur à 680px--*/
+
+@media screen and (max-width:680px)
+{
+    /*****Menu***/
+    
+header{
+    position: fixed;
+    height: auto;
+    display: flex;
+    }
+div.logo{
+    display: none;
+}
+div.nav{ 
+        width: auto;
+}
+.accueil{
+    width: auto;
+    height: auto;
+}
+.nav001{
+    list-style-type: none;
+    word-spacing: 2px;
+    padding-left: 1vw;
+}
+    
+    /**carrousel**/
+    
+#text_titre{
+        display: none;
+}
+    #text_titre{
+        display: none;
+    }
+.bout_intro{
+        display: none;
+}
+.logo{
+    display: none;
+}
+
+    /***service**/
+    
+ div.bloc_services{
+       flex-direction: column; 
+    }
+.text_partie2{
+    width: 95vw;
+    padding-right: 1vw;
+    }
+div.ordi{
+        display: none;
+    }
+    div.icone{
+        display: none;
+    }
+
+    /***portfolio**/
+    
+#bouton-galerie{
+        display: none;
+    } 
+#oeil{
+    display: none;
+    }
+.accroche{
+    color: white;
+    text-shadow: 1px 1px 2px gray;
+    padding-left: 1vw;
+}
+#accroche2{
+    display: none;
+}
+.mosaique{
+    padding-top: 0;
+    display: flex;
+
+
+    padding-bottom: 0;
+    width: auto;
+}
+    /***contact**/
+
+    .info{
+        width: 50%;
+    }
+    form{
+        padding-top:0;
+        width: auto;
+    }
+}
+ 
+/*---écrans compris entre 680px et 992px--*/
+
+@media screen and (max-width: 992px)
+{
+    /*****Menu****/
+   
+    /**slider**/
+div.bout_intro{
+        display: none; 
+}
+    
+}
